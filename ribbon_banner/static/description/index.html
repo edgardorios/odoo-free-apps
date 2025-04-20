@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ribbon Banner</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { color: #2c3e50; }
+        .screenshot { max-width: 100%; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ribbon Banner</h1>
+        <p>
+            The <strong>Ribbon Banner</strong> app adds a customizable ribbon to your Odoo instance, displaying the environment (e.g., DEV, TEST, STAGING) and database name in the top-left corner. Perfect for multi-environment setups to avoid confusion!
+        </p>
+        <h2>Features</h2>
+        <ul>
+            <li>Displays a ribbon banner with environment and database name.</li>
+            <li>Configure in <strong>Settings > General Settings</strong>:
+                <ul>
+                    <li><strong>Banner Text</strong>: Set custom text (e.g., "DEV").</li>
+                    <li><strong>Banner Opacity</strong>: Set opacity between 0.0 (fully transparent) and 1.0 (fully opaque).</li>
+                    <li><strong>Banner Text Color</strong>: Choose text color.</li>
+                    <li><strong>Banner Background Color</strong>: Choose via color picker.</li>
+                </ul>
+            </li>
+            <li>Lightweight and easy to install.</li>
+            <li>Free and open-source under LGPL-3.</li>
+        </ul>
+        <h2>Installation</h2>
+        <p>
+            Install from <a href="https://apps.odoo.com/apps/modules/18.0/ribbon_banner">Odoo Apps</a>:
+        </p>
+        <ol>
+            <li>Visit <a href="https://apps.odoo.com/apps/modules/18.0/ribbon_banner">Ribbon Banner on Odoo Apps</a> and click <strong>Download</strong> to get the ZIP file.</li>
+            <li>Extract the ZIP to obtain the <code>ribbon_banner</code> folder.</li>
+            <li>Copy the <code>ribbon_banner</code> folder to your Odoo <code>addons</code> directory.</li>
+            <li>Log in to Odoo with admin rights.</li>
+            <li>Go to <strong>Settings > About</strong> and click <strong>Activate the developer mode</strong>.</li>
+            <li>Go to <strong>Apps</strong> and click <strong>Update Apps List</strong>.</li>
+            <li>Search for "Ribbon Banner" and click <strong>Install</strong>.</li>
+            <li>Configure in <strong>Settings > General Settings</strong>.</li>
+        </ol>
+        <h2>Screenshots</h2>
+        <img src="./banner.png" alt="Ribbon Banner Example" class="screenshot">
+        <img src="./settings.png" alt="Ribbon Banner Settings" class="screenshot">
+        <h2>Support</h2>
+        <p>
+            For issues or feature requests, contact <a href="mailto:edgardo.rios@gmail.com">edgardo.rios@gmail.com</a> or visit <a href="https://github.com/edgardorios/ribbon-banner">GitHub</a>.
+        </p>
+    </div>
+</body>
+</html>

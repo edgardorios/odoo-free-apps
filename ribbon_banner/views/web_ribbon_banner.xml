@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="web_ribbon_banner" inherit_id="web.layout" name="Ribbon Banner">
+        <xpath expr="//body" position="inside">
+            <t t-set="banner_text" t-value="request.env['ir.config_parameter'].sudo().get_param('ribbon_banner.banner_text', 'DEV')"/>
+            <t t-set="banner_color" t-value="request.env['ir.config_parameter'].sudo().get_param('ribbon_banner.banner_color', '#FF0000')"/>
+            <t t-set="banner_text_color" t-value="request.env['ir.config_parameter'].sudo().get_param('ribbon_banner.banner_text_color', '#FFFFFF')"/>
+            <t t-set="banner_opacity" t-value="request.env['ir.config_parameter'].sudo().get_param('ribbon_banner.banner_opacity', '0.5')"/>
+            <t t-set="db_name" t-value="request.env.cr.dbname"/>
+            <span t-att-style="'width: 300px; top: 40px; left: -80px; font-size: 20px; text-align: center; padding: 8px; line-height: 25px; color: %s; transform: rotate(-45deg); position: fixed; box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); background: %s; opacity: %s; pointer-events: none; text-transform: uppercase; z-index: 9999' % (banner_text_color, banner_color, banner_opacity)">
+                <t t-esc="banner_text"/><br/>
+                <span style="text-transform: lowercase;">
+                    <t t-esc="db_name"/>
+                </span>
+            </span>
+        </xpath>
+    </template>
+</odoo>
