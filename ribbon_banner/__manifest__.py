@@ -1,6 +1,6 @@
 {
     'name': 'Ribbon Banner',
-    'version': '18.0.1.0.0',
+    'version': '18.0.2.0.0',
     'category': 'Tools',
     'summary': 'Add a customizable ribbon banner to display environment and database name',
     'description': """
