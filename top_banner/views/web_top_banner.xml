@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="web_top_banner" inherit_id="web.layout" name="Top Banner">
+        <xpath expr="//body" position="inside">
+            <t t-if="request.env.context.get('website_id') is None">
+                <t t-set="banner_enabled" t-value="request.env['ir.config_parameter'].sudo().get_param('top_banner.enabled', False)"/>
+                <t t-set="text_line1" t-value="request.env['ir.config_parameter'].sudo().get_param('top_banner.text_line1', '')"/>
+                <t t-set="link_line1" t-value="request.env['ir.config_parameter'].sudo().get_param('top_banner.link_line1', '')"/>
+                <t t-set="link_text_line1" t-value="request.env['ir.config_parameter'].sudo().get_param('top_banner.link_text_line1', '').replace('\n', ' ')"/>
+                <t t-set="text_color_line1" t-value="request.env['ir.config_parameter'].sudo().get_param('top_banner.text_color_line1', '#FFFFFF')"/>
+                <t t-set="link_color_line1" t-value="request.env['ir.config_parameter'].sudo().get_param('top_banner.link_color_line1', '#F9F06B')"/>
+                <t t-set="color_line1" t-value="request.env['ir.config_parameter'].sudo().get_param('top_banner.color_line1', '#1A5FB4')"/>
+                <t t-set="link_type_line1" t-value="request.env['ir.config_parameter'].sudo().get_param('top_banner.link_type_line1', 'text')"/>
+                <t t-set="button_color_line1" t-value="request.env['ir.config_parameter'].sudo().get_param('top_banner.button_color_line1', '#E01B24')"/>
+                <t t-set="text_line2" t-value="request.env['ir.config_parameter'].sudo().get_param('top_banner.text_line2', '')"/>
+                <t t-set="link_line2" t-value="request.env['ir.config_parameter'].sudo().get_param('top_banner.link_line2', '')"/>
+                <t t-set="link_text_line2" t-value="request.env['ir.config_parameter'].sudo().get_param('top_banner.link_text_line2', '').replace('\n', ' ')"/>
+                <t t-set="text_color_line2" t-value="request.env['ir.config_parameter'].sudo().get_param('top_banner.text_color_line2', '#FFFFFF')"/>
+                <t t-set="link_color_line2" t-value="request.env['ir.config_parameter'].sudo().get_param('top_banner.link_color_line2', '#F9F06B')"/>
+                <t t-set="color_line2" t-value="request.env['ir.config_parameter'].sudo().get_param('top_banner.color_line2', '#1A5FB4')"/>
+                <t t-set="link_type_line2" t-value="request.env['ir.config_parameter'].sudo().get_param('top_banner.link_type_line2', 'text')"/>
+                <t t-set="button_color_line2" t-value="request.env['ir.config_parameter'].sudo().get_param('top_banner.button_color_line2', '#E01B24')"/>
+                <t t-if="banner_enabled and (text_line1 or link_line1 or link_text_line1 or text_line2 or link_line2 or link_text_line2)">
+                    <div class="top_banner_container" t-att-style="'z-index: 9998;'">
+                        <t t-if="text_line1 or link_line1 or link_text_line1">
+                            <div class="top_banner_line">
+                                <span t-att-style="'color: %s; background-color: %s' % (text_color_line1, color_line1)">
+                                    <t t-if="text_line1">
+                                        <span class="banner_text"><t t-raw="text_line1"/></span>
+                                    </t>
+                                    <t t-if="link_text_line1 or link_line1">
+                                        <span class="link_wrapper">
+                                            <t t-if="link_type_line1 == 'text'">
+                                                <a t-att-href="link_line1 or '#'" target="_blank" t-att-style="'color: %s; text-decoration: underline;' % link_color_line1">
+                                                    <t t-esc="link_text_line1 or link_line1 or 'Link'"/>
+                                                </a>
+                                            </t>
+                                            <t t-elif="link_type_line1 == 'button'">
+                                                <a t-att-href="link_line1 or '#'" target="_blank" class="btn" t-att-style="'background-color: %s; color: #FFFFFF;' % button_color_line1">
+                                                    <t t-esc="link_text_line1 or link_line1 or 'Link'"/>
+                                                </a>
+                                            </t>
+                                        </span>
+                                    </t>
+                                </span>
+                            </div>
+                        </t>
+                        <t t-if="text_line2 or link_line2 or link_text_line2">
+                            <div class="top_banner_line">
+                                <span t-att-style="'color: %s; background-color: %s' % (text_color_line2, color_line2)">
+                                    <t t-if="text_line2">
+                                        <span class="banner_text"><t t-raw="text_line2"/></span>
+                                    </t>
+                                    <t t-if="link_text_line2 or link_line2">
+                                        <span class="link_wrapper">
+                                            <t t-if="link_type_line2 == 'text'">
+                                                <a t-att-href="link_line2 or '#'" target="_blank" t-att-style="'color: %s; text-decoration: underline;' % link_color_line2">
+                                                    <t t-esc="link_text_line2 or link_line2 or 'Link'"/>
+                                                </a>
+                                            </t>
+                                            <t t-elif="link_type_line2 == 'button'">
+                                                <a t-att-href="link_line2 or '#'" target="_blank" class="btn" t-att-style="'background-color: %s; color: #FFFFFF;' % button_color_line2">
+                                                    <t t-esc="link_text_line2 or link_line2 or 'Link'"/>
+                                                </a>
+                                            </t>
+                                        </span>
+                                    </t>
+                                </span>
+                            </div>
+                        </t>
+                    </div>
+                </t>
+            </t>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,179 @@
+/* Banner styling */
+.top_banner_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.top_banner_line {
+    text-align: center;
+    display: block;
+}
+
+.top_banner_line span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0 6px;
+    font-size: 16px;
+}
+
+.top_banner_line .banner_text {
+    display: inline-block;
+    max-width: 60%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 40px;
+}
+
+.top_banner_line .link_wrapper {
+    display: flex;
+    align-items: center;
+    max-width: 30%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.top_banner_line a {
+    margin-left: 8px;
+    text-decoration: underline;
+    line-height: 40px;
+    vertical-align: middle;
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: 600;
+    transition: filter 0.2s ease;
+}
+
+.top_banner_line a:hover {
+    filter: brightness(1.2);
+    cursor: pointer;
+}
+
+.top_banner_line a:active {
+    filter: brightness(0.8);
+}
+
+.top_banner_line a.btn {
+    padding: 1px 5px;
+    border-radius: 4px;
+    text-decoration: none;
+    line-height: 28px;
+    vertical-align: middle;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    transition: filter 0.2s ease, box-shadow 0.2s ease;
+}
+
+.top_banner_line a.btn:hover {
+    filter: brightness(1.1);
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+.top_banner_line a.btn:active {
+    filter: brightness(0.8);
+}
+
+/* Push down body content when banner is present */
+body:has(.top_banner_container) {
+    padding-top: 40px;
+}
+
+body:has(.top_banner_container > .top_banner_line ~ .top_banner_line) {
+    padding-top: 80px;
+}
+
+/* Settings form styling */
+.app_settings_block[data-string='Top Banner'] .o_setting_box {
+    margin-bottom: 16px;
+    padding: 8px;
+}
+
+/* Ensure consistent spacing for section headers */
+.app_settings_block[data-string='Top Banner'] h2 {
+    font-size: 18px;
+    margin: 16px 0 8px;
+}
+
+/* Textareas for Banner Text and Link Text */
+.app_settings_block[data-string='Top Banner'] textarea.o_input {
+    width: 100%;
+    resize: vertical;
+    box-sizing: border-box;
+    border: 1px solid #ced4da;
+    padding: 6px;
+}
+
+/* URL inputs for Banner Link fields */
+.app_settings_block[data-string='Top Banner'] input.o_input[type="url"] {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ced4da;
+    padding: 6px;
+}
+
+/* Color pickers for Text Color, Link Color, and Background Color */
+.app_settings_block[data-string='Top Banner'] .o_field_color {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ced4da;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/* Responsive adjustments for small screens */
+@media screen and (max-width: 768px) {
+    .top_banner_line span {
+        height: 36px;
+        font-size: 14px;
+        padding: 0 4px;
+    }
+
+    .top_banner_line .banner_text {
+        max-width: 60%;
+        line-height: 36px;
+    }
+
+    .top_banner_line .link_wrapper {
+        max-width: 30%;
+    }
+
+    .top_banner_line a {
+        line-height: 36px;
+        font-weight: 600;
+    }
+
+    .top_banner_line a.btn {
+        padding: 1px 4px;
+        line-height: 26px;
+    }
+
+    .top_banner_line a.btn:hover {
+        filter: brightness(1.1);
+        box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+    }
+
+    .top_banner_line a.btn:active {
+        filter: brightness(0.8);
+    }
+
+    body:has(.top_banner_container) {
+        padding-top: 36px;
+    }
+
+    body:has(.top_banner_container > .top_banner_line ~ .top_banner_line) {
+        padding-top: 72px;
+    }
+}

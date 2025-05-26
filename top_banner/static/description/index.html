@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Top Banner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        code {
+            background-color: #f8f9fa;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-size: 90%;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="mb-4">Top Banner</h1>
+
+        <p>The <strong>Top Banner</strong> module adds a customizable two-line banner at the top of all Odoo screens.
+            It's ideal for displaying environment indicators (e.g., Test, Staging, Production), maintenance alerts, or
+            company-wide announcements. The banner is highly configurable and ensures important messages are always
+            visible to users.</p>
+
+        <h2 class="mt-5">Features</h2>
+        <ul>
+            <li><strong>Two-Line Banner</strong>: Configure two separate lines, each with its own background color,
+                text, and optional hyperlink.</li>
+            <li><strong>Rich Customization:</strong>
+                <ul>
+                    <li>Background color</li>
+                    <li>Text content and text color</li>
+                    <li>Optional hyperlink: URL, link text, display type (text or button), and custom styles per type
+                    </li>
+                </ul>
+            </li>
+            <li><strong>Conditional Display:</strong>
+                <ul>
+                    <li>Show or hide the entire banner using a toggle</li>
+                    <li>Show individual links or buttons based on display type selection</li>
+                    <li>Automatically hides a line if information is empty</li>
+                </ul>
+            </li>
+            <li><strong>Odoo Settings Integration:</strong> All configurations are available under <strong>Settings &gt;
+                    Top Banner</strong></li>
+        </ul>
+
+        <h2 class="mt-5">Use Cases</h2>
+        <ul>
+            <li>Marking environments (e.g., Test, Staging, or Production)</li>
+            <li>Announcing scheduled maintenance or outages</li>
+            <li>Displaying internal notices or onboarding tips</li>
+            <li>Reminding users of deadlines or policy updates</li>
+            <li>Sharing contact or support information company-wide</li>
+        </ul>
+
+        <h2 class="mt-5">Installation</h2>
+        <ol>
+            <li>Copy the <code>top_banner</code> folder to your Odoo addons directory (e.g.,
+                <code>/odoo/addons/</code>).
+            </li>
+            <li>Enable Developer Mode in Odoo.</li>
+            <li>Go to <strong>Apps</strong> &gt; <strong>Update Apps List</strong>.</li>
+            <li>Search for "Top Banner" and click <strong>Activate</strong>.</li>
+            <li>Go to <strong>Settings &gt; Top Banner</strong> to configure.</li>
+        </ol>
+
+        <h2 class="mt-5">Configuration</h2>
+        <p>In <strong>Settings &gt; Top Banner</strong>:</p>
+
+        <h4>General</h4>
+        <ul>
+            <li><strong>Enable Top Banner</strong>: Toggle to activate or deactivate the banner globally.</li>
+        </ul>
+
+        <h4>Line 1 Configuration</h4>
+        <ul>
+            <li><strong>Background Color</strong></li>
+            <li><strong>Text</strong> (supports <code>&lt;b&gt;</code> tags for bold formatting)</li>
+            <li><strong>Text Color</strong></li>
+            <li><strong>Link URL</strong> (e.g., <code>https://www.odoo.com/</code>)</li>
+            <li><strong>Link Text</strong></li>
+            <li><strong>Link Type</strong>: Select between text or button
+                <ul>
+                    <li>If <strong>Text</strong>: Choose <strong>Link Color</strong></li>
+                    <li>If <strong>Button</strong>: Choose <strong>Button Color</strong></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4>Line 2 Configuration</h4>
+        <p>All settings are the same as Line 1, independently configurable</p>
+
+        <h2 class="mt-5">Screenshots</h2>
+
+        <div class="mb-4">
+            <strong>Home Menu</strong><br>
+            <img src="homescreen.png" alt="Top banner displayed on the home menu">
+        </div>
+        <div class="mb-4">
+            <strong>Settings</strong><br>
+            <img src="settings.png" alt="Top Banner Settings">
+        </div>
+        <div class="mb-4">
+            <strong>Two Lines</strong><br>
+            <img src="announcement.png" alt="Top Banner Two Lines">
+        </div>
+
+        <h2 class="mt-5">Support</h2>
+        <p>For questions or feedback, contact <a href="mailto:edgardo.rios@gmail.com">edgardo.rios@gmail.com</a> or
+            visit <a href="https://github.com/edgardorios/odoo-free-apps">GitHub</a>.</p>
+    </div>
+</body>
+
+</html>

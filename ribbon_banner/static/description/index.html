@@ -1,58 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ribbon Banner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body { font-family: Arial, sans-serif; }
-        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
-        h1 { color: #2c3e50; }
-        .screenshot { max-width: 100%; margin: 10px 0; }
+        body {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        code {
+            background-color: #f8f9fa;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-size: 90%;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <h1>Ribbon Banner</h1>
-        <p>
-            The <strong>Ribbon Banner</strong> app adds a customizable ribbon to your Odoo instance, displaying the environment (e.g., DEV, TEST, STAGING) and database name in the top-left corner. Perfect for multi-environment setups to avoid confusion!
-        </p>
-        <h2>Features</h2>
+        <h1 class="mb-4">Ribbon Banner</h1>
+
+        <p>The <strong>Ribbon Banner</strong> module adds a simple, customizable ribbon to the top-left corner of your
+            Odoo screens. It's useful for marking environments (like DEV or STAGING) and showing the database name to
+            help users avoid confusion.</p>
+
+        <h2 class="mt-5">Features</h2>
         <ul>
-            <li>Displays a ribbon banner with environment and database name.</li>
-            <li>Configure in <strong>Settings > General Settings</strong>:
+            <li><strong>Environment Ribbon:</strong> Displays a small banner on the top-left with custom text.</li>
+            <li><strong>Customizable:</strong>
                 <ul>
-                    <li><strong>Banner Text</strong>: Set custom text (e.g., "DEV").</li>
-                    <li><strong>Banner Opacity</strong>: Set opacity between 0.0 (fully transparent) and 1.0 (fully opaque).</li>
-                    <li><strong>Banner Text Color</strong>: Choose text color.</li>
-                    <li><strong>Banner Background Color</strong>: Choose via color picker.</li>
+                    <li>Text</li>
+                    <li>Text color</li>
+                    <li>Background color</li>
+                    <li>Opacity</li>
                 </ul>
             </li>
-            <li>Lightweight and easy to install.</li>
-            <li>Free and open-source under LGPL-3.</li>
+            <li><strong>Odoo Settings Integration:</strong> All configurations available under <strong>Settings &gt;
+                    Ribbon Banner</strong></li>
         </ul>
-        <h2>Installation</h2>
-        <p>
-            Install from <a href="https://apps.odoo.com/apps/modules/18.0/ribbon_banner">Odoo Apps</a>:
-        </p>
+
+        <h2 class="mt-5">Installation</h2>
         <ol>
-            <li>Visit <a href="https://apps.odoo.com/apps/modules/18.0/ribbon_banner">Ribbon Banner on Odoo Apps</a> and click <strong>Download</strong> to get the ZIP file.</li>
-            <li>Extract the ZIP to obtain the <code>ribbon_banner</code> folder.</li>
-            <li>Copy the <code>ribbon_banner</code> folder to your Odoo <code>addons</code> directory.</li>
-            <li>Log in to Odoo with admin rights.</li>
-            <li>Go to <strong>Settings > About</strong> and click <strong>Activate the developer mode</strong>.</li>
-            <li>Go to <strong>Apps</strong> and click <strong>Update Apps List</strong>.</li>
-            <li>Search for "Ribbon Banner" and click <strong>Install</strong>.</li>
-            <li>Configure in <strong>Settings > General Settings</strong>.</li>
+            <li>Copy the <code>ribbon_banner</code> folder to your Odoo addons directory (e.g.,
+                <code>/odoo/addons/</code>).
+            </li>
+            <li>Enable Developer Mode in Odoo.</li>
+            <li>Go to <strong>Apps</strong> &gt; <strong>Update Apps List</strong>.</li>
+            <li>Search for "Ribbon Banner" and click <strong>Activate</strong>.</li>
+            <li>Go to <strong>Settings &gt; Ribbon Banner</strong> to configure.</li>
         </ol>
-        <h2>Screenshots</h2>
-        <img src="./banner.png" alt="Ribbon Banner Example" class="screenshot">
-        <img src="./settings.png" alt="Ribbon Banner Settings" class="screenshot mt-4">
-        <h2>Support</h2>
-        <p>
-            For issues or feature requests, contact <a href="mailto:edgardo.rios@gmail.com">edgardo.rios@gmail.com</a> or visit <a href="https://github.com/edgardorios/odoo-free-apps">GitHub</a>.
-        </p>
+
+        <h2 class="mt-5">Configuration</h2>
+        <p>In <strong>Settings &gt; Ribbon Banner</strong>, you can customize the ribbon:</p>
+        <ul>
+            <li><strong>Banner Text</strong>: Enter the label (e.g., DEV, STAGING).</li>
+            <li><strong>Opacity</strong>: Set transparency level (0.0 to 1.0).</li>
+            <li><strong>Text Color</strong>: Choose any color for the ribbon text.</li>
+            <li><strong>Background Color</strong>: Pick a background color.</li>
+        </ul>
+
+        <h2 class="mt-5">Screenshots</h2>
+
+        <div class="mb-4">
+            <strong>Home Menu</strong><br>
+            <img src="banner.png" alt="Ribbon Banner Example">
+        </div>
+        <div class="mb-4">
+            <strong>Settings</strong><br>
+            <img src="settings.png" alt="Ribbon Banner Settings">
+        </div>
+
+        <h2 class="mt-5">Support</h2>
+        <p>For questions or feedback, contact <a href="mailto:edgardo.rios@gmail.com">edgardo.rios@gmail.com</a> or
+            visit <a href="https://github.com/edgardorios/odoo-free-apps">GitHub</a>.</p>
     </div>
 </body>
+
 </html>

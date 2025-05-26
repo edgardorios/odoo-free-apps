@@ -1,61 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <record id="res_config_settings_view_form_ribbon_banner" model="ir.ui.view">
-        <field name="name">res.config.settings.view.form.ribbon.banner</field>
+        <field name="name">res.config.settings.ribbon.banner.form</field>
         <field name="model">res.config.settings</field>
-        <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="priority" eval="100"/>
         <field name="arch" type="xml">
-            <xpath expr="//app[@name='general_settings']" position="inside">
-                <field name="show_ribbon_banner" invisible="1"/>
-                <div class="app_settings_block" string="Ribbon Banner" data-key="ribbon_banner">
-                    <h2>Ribbon Banner</h2>
-                    <div class="row mt16 o_settings_container">
-                        <div class="col-12 col-lg-6">
-                            <div class="o_setting_box o_searchable_setting" id="ribbon_banner_text">
-                                <div class="o_setting_left_pane"/>
-                                <div class="o_setting_right_pane">
-                                    <span class="o_form_label">Banner Text</span>
-                                    <div class="text-muted">Set the text displayed on the ribbon banner</div>
-                                    <div class="mt16">
-                                        <field name="banner_text" class="o_field_char"/>
+            <xpath expr="//form/app[last()]" position="after">
+                <app data-string="Ribbon Banner" string="Ribbon Banner" name="ribbon_banner" logo="/ribbon_banner/static/description/icon.png">
+                    <div class="app_settings_block" data-string="Ribbon Banner" data-key="ribbon_banner">
+                        <h2>Ribbon Banner</h2>
+                        <div class="row mt16 o_settings_container">
+                            <div class="col-12 col-lg-6">
+                                <div class="o_setting_box o_searchable_setting" id="ribbon_banner_text">
+                                    <div class="o_setting_right_pane">
+                                        <label for="banner_text" string="Banner Text" class="o_form_label"/>
+                                        <div class="text-muted">Set the text displayed on the ribbon banner</div>
+                                        <div class="mt16 content-group">
+                                            <field name="banner_text" class="o_field_char"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="o_setting_box o_searchable_setting" id="ribbon_banner_text_color">
+                                    <div class="o_setting_right_pane">
+                                        <label for="banner_text_color" string="Banner Text Color" class="o_form_label"/>
+                                        <div class="text-muted">Choose the text color for the ribbon banner</div>
+                                        <div class="mt16 content-group">
+                                            <field name="banner_text_color" widget="color"/>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="o_setting_box o_searchable_setting" id="ribbon_banner_text_color">
-                                <div class="o_setting_left_pane"/>
-                                <div class="o_setting_right_pane">
-                                    <span class="o_form_label">Banner Text Color</span>
-                                    <div class="text-muted">Choose the text color for the ribbon banner</div>
-                                    <div class="mt16">
-                                        <field name="banner_text_color" widget="color"/>
+                            <div class="col-12 col-lg-6">
+                                <div class="o_setting_box o_searchable_setting" id="ribbon_banner_opacity">
+                                    <div class="o_setting_right_pane">
+                                        <label for="banner_opacity" string="Banner Opacity" class="o_form_label"/>
+                                        <div class="text-muted">Set opacity between 0.0 (fully transparent) and 1.0 (fully opaque)</div>
+                                        <div class="mt16 content-group">
+                                            <field name="banner_opacity" class="o_field_float"/>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-6">
-                            <div class="o_setting_box o_searchable_setting" id="ribbon_banner_opacity">
-                                <div class="o_setting_left_pane"/>
-                                <div class="o_setting_right_pane">
-                                    <span class="o_form_label">Banner Opacity</span>
-                                    <div class="text-muted">Set opacity between 0.0 (fully transparent) and 1.0 (fully opaque)</div>
-                                    <div class="mt16">
-                                        <field name="banner_opacity" class="o_field_float"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="o_setting_box o_searchable_setting" id="ribbon_banner_color">
-                                <div class="o_setting_left_pane"/>
-                                <div class="o_setting_right_pane">
-                                    <span class="o_form_label">Banner Background Color</span>
-                                    <div class="text-muted">Choose the background color for the ribbon banner</div>
-                                    <div class="mt16">
-                                        <field name="banner_color" widget="color"/>
+                                <div class="o_setting_box o_searchable_setting" id="ribbon_banner_color">
+                                    <div class="o_setting_right_pane">
+                                        <label for="banner_color" string="Banner Background Color" class="o_form_label"/>
+                                        <div class="text-muted">Choose the background color for the ribbon banner</div>
+                                        <div class="mt16 content-group">
+                                            <field name="banner_color" widget="color"/>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </app>
             </xpath>
         </field>
     </record>

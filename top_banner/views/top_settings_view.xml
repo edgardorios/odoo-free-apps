@@ -1,0 +1,183 @@
+<odoo>
+    <record id="view_res_config_settings_top_banner_form" model="ir.ui.view">
+        <field name="name">res.config.settings.top.banner.form</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="priority" eval="100"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/app[last()]" position="after">
+                <app data-string="Top Banner" string="Top Banner" name="top_banner" logo="/top_banner/static/description/icon.png">
+                    <div class="app_settings_block" data-string="Top Banner" data-key="top_banner">
+                        <h2>Top Banner</h2>
+                        <div class="row mt16 o_settings_container">
+                            <div class="o_setting_box col-12 col-lg-6 o_searchable_setting">
+                                <div class="o_setting_left_pane">
+                                    <field name="top_banner_enabled" class="o_field_boolean"/>
+                                </div>
+                                <div class="o_setting_right_pane">
+                                    <label for="top_banner_enabled" string="Enable Top Banner" class="o_form_label"/>
+                                    <div class="text-muted">
+                                        Display a customizable banner at the top of Odoo screens for announcements or important messages.
+                                    </div>
+                                    <div class="mt16"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt16 o_settings_container" invisible="top_banner_enabled == False">
+                            <div class="col-12 col-lg-6">
+                                <h2>Line 1</h2>
+                                <div class="o_setting_box o_searchable_setting">
+                                    <div class="o_setting_right_pane">
+                                        <label for="top_banner_color_line1" string="Background Color" class="o_form_label"/>
+                                        <div class="text-muted">Choose the banner background color for line 1</div>
+                                        <div class="mt16 content-group">
+                                            <field name="top_banner_color_line1" widget="color"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="o_setting_box o_searchable_setting">
+                                    <div class="o_setting_right_pane">
+                                        <label for="top_banner_text_line1" string="Text" class="o_form_label"/>
+                                        <div class="text-muted">Set the banner text for line 1.<br/>Use &lt;b&gt; tags for bold text (e.g., &lt;b&gt;bold&lt;/b&gt;).</div>
+                                        <div class="mt16 content-group">
+                                            <field name="top_banner_text_line1" widget="text"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="o_setting_box o_searchable_setting">
+                                    <div class="o_setting_right_pane">
+                                        <label for="top_banner_text_color_line1" string="Text Color" class="o_form_label"/>
+                                        <div class="text-muted">Choose the banner text color for line 1</div>
+                                        <div class="mt16 content-group">
+                                            <field name="top_banner_text_color_line1" widget="color"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="o_setting_box o_searchable_setting">
+                                    <div class="o_setting_right_pane">
+                                        <label for="top_banner_link_line1" string="Link URL" class="o_form_label"/>
+                                        <div class="text-muted">Set the banner link URL for line 1<br/>(e.g., https://www.odoo.com/)</div>
+                                        <div class="mt16 content-group">
+                                            <field name="top_banner_link_line1" widget="text"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="o_setting_box o_searchable_setting">
+                                    <div class="o_setting_right_pane">
+                                        <label for="top_banner_link_text_line1" string="Link Text" class="o_form_label"/>
+                                        <div class="text-muted">Set the banner link text for line 1 (e.g., Link)</div>
+                                        <div class="mt16 content-group">
+                                            <field name="top_banner_link_text_line1" widget="text"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="o_setting_box o_searchable_setting">
+                                    <div class="o_setting_right_pane">
+                                        <label for="link_type_line1" string="Link Type" class="o_form_label"/>
+                                        <div class="text-muted">Choose how the link should be displayed</div>
+                                        <div class="mt16 content-group">
+                                            <field name="link_type_line1"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="o_setting_box o_searchable_setting" invisible="link_type_line1 and link_type_line1 != 'text'">
+                                    <div class="o_setting_right_pane">
+                                        <label for="top_banner_link_color_line1" string="Link Color" class="o_form_label"/>
+                                        <div class="text-muted">Choose the banner link color for line 1</div>
+                                        <div class="mt16 content-group">
+                                            <field name="top_banner_link_color_line1" widget="color"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="o_setting_box o_searchable_setting" invisible="link_type_line1 != 'button'">
+                                    <div class="o_setting_right_pane">
+                                        <label for="button_color_line1" string="Button Color" class="o_form_label"/>
+                                        <div class="text-muted">Choose the button background color for line 1</div>
+                                        <div class="mt16 content-group">
+                                            <field name="button_color_line1" widget="color"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <h2>Line 2</h2>
+                                <div class="o_setting_box o_searchable_setting">
+                                    <div class="o_setting_right_pane">
+                                        <label for="top_banner_color_line2" string="Background Color" class="o_form_label"/>
+                                        <div class="text-muted">Choose the banner background color for line 2</div>
+                                        <div class="mt16 content-group">
+                                            <field name="top_banner_color_line2" widget="color"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="o_setting_box o_searchable_setting">
+                                    <div class="o_setting_right_pane">
+                                        <label for="top_banner_text_line2" string="Text" class="o_form_label"/>
+                                        <div class="text-muted">Set the banner text for line 2.<br/>Use &lt;b&gt; tags for bold text (e.g., &lt;b&gt;bold&lt;/b&gt;).</div>
+                                        <div class="mt16 content-group">
+                                            <field name="top_banner_text_line2" widget="text"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="o_setting_box o_searchable_setting">
+                                    <div class="o_setting_right_pane">
+                                        <label for="top_banner_text_color_line2" string="Text Color" class="o_form_label"/>
+                                        <div class="text-muted">Choose the banner text color for line 2</div>
+                                        <div class="mt16 content-group">
+                                            <field name="top_banner_text_color_line2" widget="color"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="o_setting_box o_searchable_setting">
+                                    <div class="o_setting_right_pane">
+                                        <label for="top_banner_link_line2" string="Link URL" class="o_form_label"/>
+                                        <div class="text-muted">Set the banner link URL for line 2<br/>(e.g., https://www.odoo.com/)</div>
+                                        <div class="mt16 content-group">
+                                            <field name="top_banner_link_line2" widget="text"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="o_setting_box o_searchable_setting">
+                                    <div class="o_setting_right_pane">
+                                        <label for="top_banner_link_text_line2" string="Link Text" class="o_form_label"/>
+                                        <div class="text-muted">Set the banner link text for line 2 (e.g., Link)</div>
+                                        <div class="mt16 content-group">
+                                            <field name="top_banner_link_text_line2" widget="text"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="o_setting_box o_searchable_setting">
+                                    <div class="o_setting_right_pane">
+                                        <label for="link_type_line2" string="Link Type" class="o_form_label"/>
+                                        <div class="text-muted">Choose how the link should be displayed</div>
+                                        <div class="mt16 content-group">
+                                            <field name="link_type_line2"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="o_setting_box o_searchable_setting" invisible="link_type_line2 and link_type_line2 != 'text'">
+                                    <div class="o_setting_right_pane">
+                                        <label for="top_banner_link_color_line2" string="Link Color" class="o_form_label"/>
+                                        <div class="text-muted">Choose the banner link color for line 2</div>
+                                        <div class="mt16 content-group">
+                                            <field name="top_banner_link_color_line2" widget="color"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="o_setting_box o_searchable_setting" invisible="link_type_line2 != 'button'">
+                                    <div class="o_setting_right_pane">
+                                        <label for="button_color_line2" string="Button Color" class="o_form_label"/>
+                                        <div class="text-muted">Choose the button background color for line 2</div>
+                                        <div class="mt16 content-group">
+                                            <field name="button_color_line2" widget="color"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </app>
+            </xpath>
+        </field>
+    </record>
+</odoo>
