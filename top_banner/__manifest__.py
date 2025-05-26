@@ -9,7 +9,7 @@
     'author': "Edgardo Rios",
     'website': 'https://github.com/edgardorios/odoo-free-apps',
     'category': 'Tools',
-    'version': '18.0.1.0.0',
+    'version': '18.0.1.0.1',
     'depends': ['base', 'web'],
     'sequence': 1000,  # High sequence to load last
     'data': [
@@ -22,10 +22,9 @@
         ],
     },
     'images': [
-        'static/description/screenshot1.png',
-        'static/description/screenshot2.png',
-        'static/description/screenshot3.png',
+        'static/description/icon.png',
     ],
+    'support': 'edgardo.rios@gmail.com',
     'license': 'LGPL-3',
     'installable': True,
     'auto_install': False,
