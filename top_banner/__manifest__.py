@@ -1,5 +1,7 @@
 {
     'name': "Top Banner",
+    'version': '18.0.1.0.2',
+    'category': 'Tools',
     'summary': "Add a customizable two-line banner for Odoo screens to communicate important messages",
     'description': """
         Add a customizable two-line banner at the top of Odoo screens. Perfect for displaying environment indicators 
@@ -8,10 +10,9 @@
     """,
     'author': "Edgardo Rios",
     'website': 'https://github.com/edgardorios/odoo-free-apps',
-    'category': 'Tools',
-    'version': '18.0.1.0.1',
+    'license': 'LGPL-3',
     'depends': ['base', 'web'],
-    'sequence': 1000,  # High sequence to load last
+    'sequence': 1000,
     'data': [
         'views/top_settings_view.xml',
         'views/web_top_banner.xml',
@@ -25,8 +26,7 @@
         'static/description/icon.png',
     ],
     'support': 'edgardo.rios@gmail.com',
-    'license': 'LGPL-3',
+    'application': True,
     'installable': True,
     'auto_install': False,
-    'application': True,
 }

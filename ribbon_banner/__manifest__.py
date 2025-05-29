@@ -1,6 +1,6 @@
 {
     'name': 'Ribbon Banner',
-    'version': '18.0.3.0.0',
+    'version': '18.0.3.0.1',
     'category': 'Tools',
     'summary': 'Add a customizable ribbon banner to display environment and database name',
     'description': """
@@ -12,11 +12,14 @@
     'website': 'https://github.com/edgardorios/odoo-free-apps',
     'license': 'LGPL-3',
     'depends': ['base', 'base_setup', 'web'],
+    'sequence': 1000,
     'data': [
         'views/ribbon_settings_view.xml',
         'views/web_ribbon_banner.xml',
     ],
-    'images': ['static/description/icon.png'],
+    'images': [
+        'static/description/icon.png'
+    ],
     'support': 'edgardo.rios@gmail.com',
     'application': True,
     'installable': True,
