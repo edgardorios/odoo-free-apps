@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <record id="view_res_config_settings_top_banner_form" model="ir.ui.view">
         <field name="name">res.config.settings.top.banner.form</field>

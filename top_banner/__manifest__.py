@@ -1,6 +1,6 @@
 {
     'name': "Top Banner",
-    'version': '18.0.1.0.2',
+    'version': '18.0.1.0.3',
     'category': 'Tools',
     'summary': "Add a customizable two-line banner for Odoo screens to communicate important messages",
     'description': """
